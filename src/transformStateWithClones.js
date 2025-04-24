@@ -26,7 +26,7 @@ function transformStateWithClones(state, actions) {
         delete copyCurrentState[key];
       }
     }
-    cloneVersion.push(copyCurrentState);
+    cloneVersion.push({ ...copyCurrentState });
   }
 
   return cloneVersion;
